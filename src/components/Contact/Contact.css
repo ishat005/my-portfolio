@@ -1,0 +1,72 @@
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .contact > h2{
+      margin-left: -0.2rem;
+      width: 53vw;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .contact > h2{
+    width: 44vw;
+  }  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact> h2 {
+    margin-left: 1rem;
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts {
+    width: 75vw;
+  }
+
+  .contact > h2 {
+    margin-left: 10rem;
+    width: 30vw;
+  }
+}
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.35rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+ 
+

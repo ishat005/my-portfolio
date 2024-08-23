@@ -1,0 +1,28 @@
+  @media screen and (min-width: 320px) {
+    .experience{
+      width: 166vw;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .experience{
+      margin-left: 10rem;
+      width: 50vw;
+    } 
+  }
+  
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+}  
+
+li {
+  margin-bottom: 1rem;
+  line-height: 1.9rem;
+  font-size: 1.35rem;
+}
+
+p {
+  line-height: 1.9rem;
+  font-size: 1.35rem;
+}

@@ -51,10 +51,7 @@ const About = () => {
       <a href="https://github.com/ishat005" target="_blank"><button className='btn btn-github'>GitHub</button></a>
       <a href="https://www.linkedin.com/in/thakurisha/" target="_blank"><button className='btn btn-linkedin'>LinkedIn</button></a>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tisha8357@gmail.com&su=SUBJECT&body=BODY" target="_blank"><button className='btn btn-email'>Email</button></a>
-
-      {/* <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tisha8357@gmail.com&su=SUBJECT&body=BODY" target="_blank">Email</a> */}
     </div>
-
   </section>
   )
 }

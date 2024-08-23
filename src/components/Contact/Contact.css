@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     font-size: 1.35rem;
+    color: rgba(49, 49, 45, 1);
   }
   
   .contact-form input,
@@ -53,15 +54,16 @@
   
   .contact-form button {
     padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 12px;
     cursor: pointer;
   }
   
   .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #94b8df;
+    color: white;
   }
   
   .error {

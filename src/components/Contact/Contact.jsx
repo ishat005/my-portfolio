@@ -1,40 +1,56 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 import './Contact.css';
-import  emailIcon  from '../../assets/email.jpg'
-import locationIcon from '../../assets/location.png';
-
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
-    alert('Message sent successfully!');
-    console.log(data);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [sent, setSent] = useState(false);
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setName('');
+    setEmail('');
+    setMessage('');
+  
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+  
+    fetch('https://formspree.io/f/xanwlzbg', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setSent(true);
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-        <label>
-          Name:
-          <input type="text" {...register('name', { required: 'Name is required' })} />
-          {errors.name && <span className="error">{errors.name.message}</span>}
-        </label>
-        <label>
-          Email:
-          <input type="email" {...register('email', { required: 'Email is required' })} />
-          {errors.email && <span className="error">{errors.email.message}</span>}
-        </label>
-        <label>
-          Message:
-          <textarea {...register('message', { required: 'Message is required' })}></textarea>
-          {errors.message && <span className="error">{errors.message.message}</span>}
-        </label>
+      <form onSubmit={handleSubmit} className="contact-form">
+          <label>
+            Name:
+            <input type="text" value={name} onChange={(event) => setName(event.target.value)} />     
+          </label>
+          <label>
+            Email:
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+          </label>
+          <label> 
+            Message:
+          <textarea value={message} onChange={(event) => setMessage(event.target.value)} />
+          </label>
         <button type="submit">Send</button>
+        {sent && <p>Message sent successfully!</p>}
       </form>
     </section>
   );
-}
+};
 
 export default Contact;

@@ -24,7 +24,6 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setSent(true);
       })
       .catch((error) => console.error(error));
@@ -36,15 +35,15 @@ const Contact = () => {
       <form onSubmit={handleSubmit} className="contact-form">
           <label>
             Name:
-            <input type="text" value={name} onChange={(event) => setName(event.target.value)} />     
+            <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />     
           </label>
           <label>
             Email:
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required/>
           </label>
           <label> 
             Message:
-          <textarea value={message} onChange={(event) => setMessage(event.target.value)} />
+          <textarea value={message} onChange={(event) => setMessage(event.target.value)} required/>
           </label>
         <button type="submit">Send</button>
         {sent && <p>Message sent successfully!</p>}

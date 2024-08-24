@@ -49,10 +49,15 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  .about {
+  .about{
     margin-left: 10rem;
     width: 50vw;
   } 
+
+ .about-text > h3, .about-text> p {
+     margin-left: 1rem;
+    width: 50vw;
+  }
 }
   
   .profile-img {

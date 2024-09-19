@@ -12,3 +12,53 @@ body {
 section {
   padding: 20px;
 }
+
+/* light theme */
+.App.light {
+  background-color: #fff;
+  color: #333;
+}
+
+/* dark theme */
+.App.dark {
+  background-color: #333333;
+  color: #f0f0f0;
+  width: 102vw;
+}
+
+.App.dark h2,
+.App.dark h3,
+.App.dark p,
+.App.dark label,
+.App.dark .experience ul li {
+  color: #fff; /* change h2 color to white in dark mode */
+}
+
+.App.dark .footer p {
+  color: #fff;
+}
+
+.App.dark .footer {
+  background-color: hsl(216, 26%, 36%);
+}
+
+.App.dark .navbar {
+  background-color: rgba(51, 51, 51, 0.7);
+}
+
+.App.dark .navbar .nav-links li a,
+.App.dark .logo {
+  color: #fff;
+}
+
+.App.dark .project-overlay h3 {
+  color: black;
+}
+
+.App.dark .project-overlay p {
+  color: gray;
+}
+
+.App.light .toggle-theme-button {
+  color: #333;
+}

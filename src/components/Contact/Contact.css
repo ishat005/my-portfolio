@@ -1,18 +1,18 @@
 @media screen and (min-width: 320px) and (max-width: 425px) {
-  .contact > h2{
-      margin-left: -0.2rem;
-      width: 68vw;
-    }
+  .contact > h2 {
+    margin-left: -0.2rem;
+    width: 68vw;
+  }
 }
 
 @media screen and (min-width: 425px) and (max-width: 768px) {
-  .contact > h2{
+  .contact > h2 {
     width: 51vw;
-  }  
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .contact> h2 {
+  .contact > h2 {
     margin-left: 1rem;
     width: 50vw;
   }
@@ -28,47 +28,45 @@
     width: 30vw;
   }
 }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form label {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.35rem;
-    color: rgba(49, 49, 45, 1);
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .contact-form button {
-    padding: 10px;
-    background-color: #ffffff;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #94b8df;
-    color: white;
-  }
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
- 
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.35rem;
+  color: rgba(49, 49, 45, 1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #94b8df;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

@@ -1,65 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0e6d7;
+  color: #885133;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 100;
+}
+
+.toggle-theme-button {
+  margin-left: auto;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 0.4rem;
+}
+
+@media screen and (min-width: 320px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f0e6d7;
-    color: #885133;
-  }
- 
-  @media screen and (min-width: 320px) {
-    .navbar {
-      width: 282vw;
-      padding: 1rem;
-    }
-
-    .navbar .nav-links {
-      margin-left: -2rem;
-      padding-top: 1rem;
-    }
+    width: 282vw;
+    padding: 1rem;
   }
 
-  @media screen and (min-width: 768px) {
-    .navbar {
-      width: 213vw;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .navbar {
-      width: 100vw;
-      padding-right: 10px;
-    }
-
-    .navbar .nav-links{
-      margin-right: 5rem;
-      padding-top: 1rem;
-    }
-  }
-  
-  
-  .navbar .logo {
-    font-size: 24px;
-    margin-left: 1rem;
-    font-weight: 570;
-  }
-  
   .navbar .nav-links {
-    list-style: none;
-    display: flex;
+    margin-left: -2rem;
+    padding-top: 1rem;
   }
-  
-  .navbar .nav-links li {
-    margin-left:  3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 213vw;
   }
-  
-  .navbar .nav-links a {
-    color: #885133;
-    text-decoration: none;
-    font-weight: 570;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    width: 100vw;
+    padding-right: 25px;
   }
-  
-  .navbar .nav-links a:hover {
-    text-decoration: underline;
+
+  .navbar .nav-links {
+    margin-right: 5rem;
+    padding-top: 1rem;
   }
-  
+}
+
+.navbar .logo {
+  font-size: 24px;
+  margin-left: 1rem;
+  font-weight: 570;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 3rem;
+}
+
+.navbar .nav-links a {
+  color: #885133;
+  text-decoration: none;
+  font-weight: 570;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}

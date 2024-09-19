@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -7,6 +7,6 @@ const Footer = () => {
       <p>&copy; 2024 By Isha Thakur. All rights reserved.</p>
     </footer>
   );
-}
+};
 
 export default Footer;

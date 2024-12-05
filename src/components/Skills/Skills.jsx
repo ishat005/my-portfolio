@@ -12,7 +12,6 @@ const skills = [
   "Python",
   "Material UI",
   "Next.js",
-  "Node.js",
   "Figma",
   "Github",
   "MongoDB",

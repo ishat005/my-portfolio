@@ -7,6 +7,8 @@ import todoApp from "../../assets/todo.png";
 import chatApp from "../../assets/img.png";
 import chitChat from "../../assets/chatApp.png";
 import materialUI from "../../assets/material-ui.png";
+import nodejsExpress from "../../assets/nodejsExpress.png";
+import nextjsShadcn from "../../assets/shadcn-ui-nextjs.jpg";
 
 const ProjectCard = ({ image, title, description, link, link2 }) => (
   <div className="project-card">
@@ -97,6 +99,24 @@ const Projects = () => {
           An admin dashboard with the help of React and Material UI.  
           "
           link="https://youtu.be/OMILrAsMneI"
+        />
+
+        <ProjectCard
+          image={nodejsExpress}
+          title="Blog App"
+          description="
+          A blog app with the help of React, Node.js, and Express.  
+          "
+          link="https://youtu.be/GvpBNDYZ2WE"
+        />
+
+        <ProjectCard
+          image={nextjsShadcn}
+          title="Pizzeria Landing Page"
+          description="
+          A landing page with Next.js and Shadcn UI.  
+          "
+          link="https://youtu.be/BhAM9h9Gimg"
         />
       </div>
     </section>

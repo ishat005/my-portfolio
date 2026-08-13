@@ -1,8 +1,8 @@
 import React from "react";
 import "./Projects.css";
+
 import cosmochat from "../../assets/cosmochat.jpeg";
 import weatherApp from "../../assets/weatherApp.png";
-import kai from "../../assets/kai.png";
 import todoApp from "../../assets/todo.png";
 import chatApp from "../../assets/img.png";
 import chitChat from "../../assets/chatApp.png";
@@ -10,9 +10,10 @@ import materialUI from "../../assets/material-ui.png";
 import nodejsExpress from "../../assets/nodejsExpress.png";
 import nextjsShadcn from "../../assets/shadcn-ui-nextjs.jpg";
 
-const ProjectCard = ({ image, title, description, link, link2 }) => (
+const ProjectCard = ({ image, title, description, link }) => (
   <div className="project-card">
     <img src={image} alt={title} className="project-image" />
+
     <div className="project-overlay">
       <div>
         <h3>{title}</h3>
@@ -22,15 +23,10 @@ const ProjectCard = ({ image, title, description, link, link2 }) => (
         <p>
           {description}
           <br />
+
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer">
               View Project
-            </a>
-          )}
-          <br />
-          {link2 && (
-            <a href={link2} target="_blank" rel="noopener noreferrer">
-              Coninue Viewing
             </a>
           )}
         </p>
@@ -48,74 +44,56 @@ const Projects = () => {
         <ProjectCard
           image={cosmochat}
           title="CosmoChat"
-          description="A Chat Interface Development app with help of React and OpenAI Integration."
+          description="A chat interface built with React and OpenAI integration."
           link="https://youtu.be/WFLQLM3exgg"
         />
 
         <ProjectCard
           image={weatherApp}
           title="Weather App"
-          description="A weather app that displays the current weather by entering location and country code. Implemented using React and OpenWeather API"
+          description="A weather application that displays current weather information based on location and country code using React and the OpenWeather API."
           link="https://www.youtube.com/watch?v=h4SjroMaNNU"
-        />
-
-        <ProjectCard
-          image={kai}
-          title="Kai Notifications"
-          description="A thorough notifying system, error-handling features, and business logic for the KAI AI Platform."
-          link="https://youtu.be/vMS90RH72bg"
-          link2="https://youtu.be/4XC004rh_aA"
         />
 
         <ProjectCard
           image={todoApp}
           title="Todo App"
-          description="A todo app that allows users to create, edit, and delete tasks and keep track of their progress."
+          description="A task management application that allows users to create, edit, delete, and track tasks."
           link="https://youtu.be/hlZY-vKkK94"
         />
 
         <ProjectCard
           image={chatApp}
           title="Realtime Chat App"
-          description="
-          A real-time chat app that allows users to send and receive messages in real-time. Implemented using Node.js and Socket.io.   
-          "
+          description="A real-time chat application built with Node.js and Socket.io that allows users to send and receive messages instantly."
           link="https://youtu.be/v2naY4vc80E"
         />
 
         <ProjectCard
           image={chitChat}
-          title="Chat App - Firebase, React"
-          description="
-          A real-time chat app that allows users to send and receive messages in real-time. Implemented using React, tailwind css, and firebase.   
-          "
+          title="Chat App - Firebase & React"
+          description="A real-time chat application built with React, Tailwind CSS, and Firebase."
           link="https://youtu.be/1i4jOS0Ug4A"
         />
 
         <ProjectCard
           image={materialUI}
           title="Admin Dashboard"
-          description="
-          An admin dashboard with the help of React and Material UI.  
-          "
+          description="An admin dashboard built with React and Material UI."
           link="https://youtu.be/OMILrAsMneI"
         />
 
         <ProjectCard
           image={nodejsExpress}
           title="Blog App"
-          description="
-          A blog app with the help of React, Node.js, and Express.  
-          "
+          description="A full-stack blog application built with React, Node.js, and Express."
           link="https://youtu.be/GvpBNDYZ2WE"
         />
 
         <ProjectCard
           image={nextjsShadcn}
           title="Pizzeria Landing Page"
-          description="
-          A landing page with Next.js and Shadcn UI.  
-          "
+          description="A modern landing page built with Next.js and Shadcn UI."
           link="https://youtu.be/BhAM9h9Gimg"
         />
       </div>

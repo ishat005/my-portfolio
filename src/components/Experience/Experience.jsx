@@ -5,76 +5,137 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <h2>Experience</h2>
+
       <div className="experience-list">
+
+        {/* Orange Data Tech */}
         <div className="experience-item">
-          <h3>Software Engineer Intern | Radical AI</h3>
-          <p>JUNE 18, 2023 - PRESENT, US (REMOTE)</p>
+          <h3>Associate Software Engineer | Orange Data Tech Pvt. Ltd.</h3>
+          <p>Aug 2025 - Present | Indore, MP</p>
+
           <ul>
             <li>
-              Leveraged technologies such as OpenAI, Node.js, and React to
-              develop Kai, an AI Teaching Assistant engineered to augment the
-              educational ecosystem by supporting instructors with intelligent
-              program design and learner engagement strategies.
+              Engineered core features using Java and Spring Boot for
+              EngagePEO, delivering scalable business solutions that met
+              complex client requirements.
+            </li>
+
+            <li>
+              Built automated report generation features using Playwright and
+              Spring Boot to programmatically export and deliver PDF and
+              PowerPoint reports from Power BI dashboards.
+            </li>
+
+            <li>
+              Developed serverless log synchronization features using Azure
+              Function Apps with Python and Java, enabling seamless data
+              workflows and improved system observability.
+            </li>
+
+            <li>
+              Built automated Python and SQL validation scripts within
+              Snowflake to maintain data consistency and reliability across
+              business dashboards.
             </li>
           </ul>
         </div>
 
+        {/* Radical AI */}
         <div className="experience-item">
-          <h3>IT Support Specialist (short-term) | SSL Computers</h3>
-          <p>JUNE 05, 2023 - JUNE 23, 2023, ABBOTSFORD, BC</p>
+          <h3>Software Engineer Intern | Radical AI</h3>
+          <p>Jun 2024 - Jan 2025 | US (Remote)</p>
+
           <ul>
             <li>
-              Managed and resolved the tickets within the ticketing system,
-              starting with the highest priority and working down to the lowest
-              by recognizing customer’s issue priority.
+              Contributed to the development of Kai, an AI Teaching Assistant,
+              using technologies including React, Node.js, Express, and
+              OpenAI.
             </li>
 
             <li>
-              Conducted data restoration as required in compliance with the
-              company’s established procedures.
+              Developed and maintained React-based user interfaces and
+              integrated frontend components with backend services and APIs.
+            </li>
+
+            <li>
+              Worked with Node.js and backend services to implement application
+              functionality, business logic, and API integrations.
+            </li>
+
+            <li>
+              Integrated OpenAI-powered functionality to support AI-assisted
+              educational workflows and user interactions.
+            </li>
+
+            <li>
+              Implemented error-handling and notification functionality to
+              improve application reliability and user experience.
+            </li>
+
+            <li>
+              Collaborated with the development team to troubleshoot issues,
+              test features, and improve application functionality.
+            </li>
+          </ul>
+        </div>
+
+        {/* SSL Computers */}
+        <div className="experience-item">
+          <h3>IT Support Specialist (short-term) | SSL Computers</h3>
+          <p>Jun 2023 | Abbotsford, BC</p>
+
+          <ul>
+            <li>
+              Managed and resolved technical support tickets based on issue
+              priority and customer impact.
+            </li>
+
+            <li>
+              Conducted data restoration and recovery according to established
+              company procedures.
             </li>
 
             <li>
               Resolved hardware and software issues, including password resets,
-              and software installations.
+              software installations, and troubleshooting.
             </li>
 
             <li>
-              Installed software and patches, scanned computers, and updated
-              antivirus programs that were accomplished for computer software
-              maintenance.
+              Installed software and patches, performed antivirus maintenance,
+              and supported computer software updates.
             </li>
           </ul>
         </div>
+
+        {/* Visions Electronics */}
         <div className="experience-item">
           <h3>Cashier and Finance | Visions Electronics</h3>
-          <p>DEC 2017 - APR 2019, VANCOUVER, BC</p>
+          <p>Dec 2017 - Apr 2019 | Vancouver, BC</p>
+
           <ul>
             <li>
-              Efficiently prioritized tasks and arranged work in a fast-paced
-              setting, increasing sales at peak hours when only three or four
-              coworkers were present.
+              Prioritized tasks efficiently in a fast-paced retail environment
+              while maintaining accurate financial transactions and customer
+              service.
             </li>
 
             <li>
-              Streamlined record-keeping processes, guaranteeing accurate and
-              timely transaction documentation for clients; achieved 100%
-              compliance with record delivery deadlines and received
-              commendation from senior management.
+              Streamlined record-keeping processes and maintained accurate and
+              timely transaction documentation.
             </li>
 
             <li>
-              Developed strong relationships with customers personally and over
-              the phone in response to their questions and concerns, ensuring
-              their loyalty and satisfaction.
+              Built strong relationships with customers by addressing
+              questions and concerns both in person and over the phone.
             </li>
 
             <li>
-              Collaborated with shift manager to address and resolve customer
-              concerns and issues.
+              Collaborated with shift managers and team members to resolve
+              customer concerns and maintain efficient daily operations.
             </li>
           </ul>
         </div>
+
       </div>
     </section>
   );

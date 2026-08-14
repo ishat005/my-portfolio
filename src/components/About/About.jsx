@@ -1,69 +1,141 @@
 import React from "react";
-import "./About.css";
 import profileImage from "../../assets/profile.png";
 
 const About = () => {
   return (
-    <section id="about" className="about">
-      <img src={profileImage} alt="Profile" className="profile-img" />
-
-      <h2>About Me</h2>
-      <div className="about-content">
-        <div className="about-text">
-          <h3>Who am I</h3>
-          <p>
-            Hi, My name is Isha. I hold a bachelor's degree in Computer Science,
-            a diploma in IT, a diploma in Software Engineering, and a passion
-            for frontend development.
-          </p>
-
-          <p>
-            In my free time, I enjoy travelling, listening to music,
-            photographing, exploring the world, and learning about new
-            technologies.
-          </p>
+    <section
+      id="about"
+      className="mx-auto w-full max-w-5xl px-4 py-12 lg:px-8"
+    >
+      {/* About Introduction */}
+      <div className="grid items-center gap-10 md:grid-cols-2">
+        {/* Profile Image */}
+        <div className="flex justify-center">
+          <img
+            src={profileImage}
+            alt="Isha Thakur"
+            className="h-56 w-56 rounded-full object-cover shadow-lg md:h-72 md:w-72"
+          />
         </div>
 
-        <div className="about-text">
-          <h3>My Passion</h3>
+        {/* About Content */}
+        <div className="text-center md:text-left">
+          <h2 className="mb-6 font-display text-3xl font-bold text-brand-brown dark:text-white">
+            About Me
+          </h2>
 
-          <p>
-            When I first chose Computer Science, I knew it was exactly what I
-            wanted to do! Ever since then, I have strived to further my career
-            by consistently trying to challenge myself and reach new heights.
+          <p className="font-sans text-lg leading-relaxed text-ink dark:text-white">
+            Hi, I'm Isha — a Software Engineer passionate about building
+            reliable, scalable, and user-focused applications. I enjoy
+            working across the stack, from developing backend services and
+            APIs to creating responsive and interactive frontend experiences.
           </p>
 
-          <p>
-            After completing my bachelor's degree, I have gained substantial
-            knowledge of software development and my love for the industry
-            continues to grow. I am constantly seeking new challenges and
-            opportunities to improve my skills, and I am excited to continue my
-            journey in the field of Computer Science.
+          <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-white">
+            My professional experience includes working with Java, Spring
+            Boot, React, Node.js, Python, SQL, Azure, and Snowflake. I have
+            worked on application development, API integrations, cloud
+            services, automation, reporting systems, and AI-powered
+            applications.
           </p>
-        </div>
 
-        <div className="about-text">
-          <h3>My Goals</h3>
-          <p>
-            My goal is to become a skilled frontend developer and contribute to
-            the success of the company. I am excited to see where my skills and
-            experience will take me in the future.
+          <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-white">
+            I enjoy solving technical problems and turning ideas into
+            practical software. My interests include full-stack development,
+            backend engineering, cloud applications, automation, and
+            AI-powered solutions.
+          </p>
+
+          <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-white">
+            Outside of development, I enjoy travelling, photography,
+            listening to music, exploring new places, and learning about
+            emerging technologies.
           </p>
         </div>
       </div>
 
-      <div className="contacts">
-        <a href="https://github.com/ishat005" target="_blank">
-          <button className="btn btn-github">GitHub</button>
-        </a>
-        <a href="https://www.linkedin.com/in/thakurisha/" target="_blank">
-          <button className="btn btn-linkedin">LinkedIn</button>
-        </a>
+      {/* Development Areas */}
+      <div className="mt-14">
+        <h3 className="mb-8 text-center font-display text-2xl font-semibold text-brand-brown dark:text-white">
+          What I Work With
+        </h3>
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Backend Development */}
+          <div className="rounded-lg border border-brand-gold bg-white p-6 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-900">
+            <h4 className="font-display text-lg font-semibold text-brand-brown dark:text-white">
+              Backend Development
+            </h4>
+
+            <p className="mt-3 font-sans text-sm leading-relaxed text-ink dark:text-gray-300">
+              Java, Spring Boot, Node.js, REST APIs, backend services, and
+              application business logic.
+            </p>
+          </div>
+
+          {/* Frontend Development */}
+          <div className="rounded-lg border border-brand-gold bg-white p-6 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-900">
+            <h4 className="font-display text-lg font-semibold text-brand-brown dark:text-white">
+              Frontend Development
+            </h4>
+
+            <p className="mt-3 font-sans text-sm leading-relaxed text-ink dark:text-gray-300">
+              React, JavaScript, Tailwind CSS, responsive interfaces, and
+              modern user experiences.
+            </p>
+          </div>
+
+          {/* Cloud & Data */}
+          <div className="rounded-lg border border-brand-gold bg-white p-6 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-900">
+            <h4 className="font-display text-lg font-semibold text-brand-brown dark:text-white">
+              Cloud & Data
+            </h4>
+
+            <p className="mt-3 font-sans text-sm leading-relaxed text-ink dark:text-gray-300">
+              Azure, Python, SQL, Snowflake, cloud-based workflows, and data
+              processing.
+            </p>
+          </div>
+
+          {/* AI & Automation */}
+          <div className="rounded-lg border border-brand-gold bg-white p-6 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-900">
+            <h4 className="font-display text-lg font-semibold text-brand-brown dark:text-white">
+              AI & Automation
+            </h4>
+
+            <p className="mt-3 font-sans text-sm leading-relaxed text-ink dark:text-gray-300">
+              OpenAI integrations, automation workflows, reporting systems,
+              and AI-powered application features.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Social Links */}
+      <div className="mt-12 flex flex-wrap justify-center gap-4">
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=tisha8357@gmail.com&su=SUBJECT&body=BODY"
+          href="https://github.com/ishat005"
           target="_blank"
+          rel="noopener noreferrer"
+          className="border-2 border-brand-gold bg-white px-8 py-4 font-sans text-lg text-black transition-colors duration-300 hover:bg-brand-gold hover:text-white dark:bg-gray-900 dark:text-white"
         >
-          <button className="btn btn-email">Email</button>
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/thakurisha/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-2 border-brand-gold bg-white px-8 py-4 font-sans text-lg text-black transition-colors duration-300 hover:bg-brand-gold hover:text-white dark:bg-gray-900 dark:text-white"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:tisha8357@gmail.com"
+          className="border-2 border-brand-gold bg-white px-8 py-4 font-sans text-lg text-black transition-colors duration-300 hover:bg-brand-gold hover:text-white dark:bg-gray-900 dark:text-white"
+        >
+          Email
         </a>
       </div>
     </section>

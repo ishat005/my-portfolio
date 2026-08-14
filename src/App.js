@@ -18,12 +18,14 @@ const App = () => {
   return (
     <div className={theme === "light" ? "App light" : "App dark"}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="pt-16">
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };

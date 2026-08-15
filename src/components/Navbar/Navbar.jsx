@@ -11,12 +11,19 @@ const NAV_LINKS = [
 
 const ThemeToggle = ({ theme, toggleTheme }) => (
   <button
+    type="button"
     className="text-xl text-brand-brown transition-transform duration-300 hover:scale-110 dark:text-white"
     onClick={toggleTheme}
-    aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+    aria-label={
+      theme === "light"
+        ? "Switch to dark mode"
+        : "Switch to light mode"
+    }
   >
     <i
-      className={`fa-solid ${theme === "light" ? "fa-moon" : "fa-sun"}`}
+      className={`fa-solid ${
+        theme === "light" ? "fa-moon" : "fa-sun"
+      }`}
       aria-hidden="true"
     ></i>
   </button>
@@ -25,45 +32,69 @@ const ThemeToggle = ({ theme, toggleTheme }) => (
 const Navbar = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <nav className="fixed top-0 left-0 z-[100] w-full bg-[#f0e6d7] px-4 py-3 dark:bg-[#333333]/90">
-      <div className="mx-auto flex max-w-8xl items-center justify-between">
-        <div className="font-display text-xl font-semibold tracking-tight text-brand-brown dark:text-white">
-          Isha Thakur
-        </div>
+  const handleHomeClick = () => {
+    setMenuOpen(false);
+  };
 
-        {/* Desktop links */}
+  return (
+    <nav className="fixed left-0 top-0 z-[100] w-full bg-[#f0e6d7] px-4 py-3 shadow-sm dark:bg-[#333333]/90">
+      <div className="mx-auto flex max-w-8xl items-center justify-between">
+        {/* Logo / Name */}
+        <a
+          href="#home"
+          onClick={handleHomeClick}
+          className="font-display text-xl font-semibold tracking-tight text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
+        >
+          Isha Thakur
+        </a>
+
+        {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-sans text-sm font-medium uppercase tracking-wide text-brand-brown transition-colors hover:text-brand-gold dark:text-white"
+                className="font-sans text-sm font-medium uppercase tracking-wide text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
               >
                 {link.label}
               </a>
             </li>
           ))}
+
+          {/* Theme Toggle */}
           <li>
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            <ThemeToggle
+              theme={theme}
+              toggleTheme={toggleTheme}
+            />
           </li>
         </ul>
 
-        {/* Mobile: toggle + hamburger */}
+        {/* Mobile Controls */}
         <div className="flex items-center gap-4 md:hidden">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <ThemeToggle
+            theme={theme}
+            toggleTheme={toggleTheme}
+          />
+
           <button
+            type="button"
             className="text-2xl text-brand-brown dark:text-white"
             onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
-            <i className={`fa-solid ${menuOpen ? "fa-xmark" : "fa-bars"}`}></i>
+            <i
+              className={`fa-solid ${
+                menuOpen ? "fa-xmark" : "fa-bars"
+              }`}
+              aria-hidden="true"
+            ></i>
           </button>
         </div>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <ul className="mt-3 flex flex-col gap-3 border-t border-brand-brown/20 pt-3 md:hidden">
           {NAV_LINKS.map((link) => (
@@ -71,7 +102,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               <a
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block font-sans text-sm font-medium uppercase tracking-wide text-brand-brown dark:text-white"
+                className="block font-sans text-sm font-medium uppercase tracking-wide text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
               >
                 {link.label}
               </a>

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex min-h-[90vh] items-center px-4 py-16 lg:px-8"
+      className="flex min-h-screen items-center px-4 pb-16 pt-28 lg:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-2">
         {/* Hero Content */}
@@ -83,9 +83,10 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="order-1 flex justify-center md:order-2">
           <div className="relative">
-            {/* Decorative circles */}
+            {/* Outer decorative circle */}
             <div className="absolute -inset-4 rounded-full border border-brand-gold/30" />
 
+            {/* Second decorative circle */}
             <div className="absolute -inset-8 rounded-full border border-brand-gold/10" />
 
             <img

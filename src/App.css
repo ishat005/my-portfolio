@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -23,7 +27,7 @@ section {
 .App.dark {
   background-color: #333333;
   color: #f0f0f0;
-  width: 102vw;
+  width: 100%;
 }
 
 .App.dark h2,

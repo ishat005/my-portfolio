@@ -18,8 +18,7 @@ const Contact = () => {
       [name]: value,
     }));
 
-    // Clear previous error when user starts editing again
-    if (status === "error") {
+    if (status === "error" || status === "success") {
       setStatus("idle");
     }
   };
@@ -61,33 +60,39 @@ const Contact = () => {
       id="contact"
       className="
         w-full
-        bg-slate-50
+        scroll-mt-24
+        bg-[#f8f3ec]
         px-5 py-20
         sm:px-8
         lg:px-12 lg:py-28
-        dark:bg-slate-900/50
+        dark:bg-[#2f2f2f]
       "
     >
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <span
+          <p
             className="
-              mb-3 inline-block
-              text-xs font-bold
-              uppercase tracking-[0.2em]
-              text-indigo-600
-              dark:text-indigo-400
+              mb-3
+              font-sans
+              text-xs
+              font-bold
+              uppercase
+              tracking-[0.2em]
+              text-brand-gold
             "
           >
             Get In Touch
-          </span>
+          </p>
 
           <h2
             className="
               mb-5
-              text-3xl font-bold tracking-tight
-              text-slate-900
+              font-display
+              text-3xl
+              font-bold
+              tracking-tight
+              text-brand-brown
               sm:text-4xl
               lg:text-5xl
               dark:text-white
@@ -98,11 +103,14 @@ const Contact = () => {
 
           <p
             className="
-              mx-auto max-w-xl
-              text-sm leading-7
-              text-slate-600
+              mx-auto
+              max-w-xl
+              font-sans
+              text-sm
+              leading-7
+              text-ink/70
               sm:text-base
-              dark:text-slate-400
+              dark:text-gray-300
             "
           >
             Have a project, opportunity, or just want to connect? Send me a
@@ -111,78 +119,137 @@ const Contact = () => {
         </div>
 
         {/* Contact Content */}
-        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          {/* Contact Info */}
+        <div
+          className="
+            mx-auto
+            grid
+            max-w-5xl
+            gap-8
+            lg:grid-cols-[0.8fr_1.2fr]
+          "
+        >
+          {/* Contact Information */}
           <div
             className="
               rounded-2xl
-              border border-slate-200
+              border
+              border-brand-gold/30
               bg-white
               p-6
               shadow-sm
               sm:p-8
-              dark:border-slate-800
-              dark:bg-slate-900
+              dark:border-brand-gold/20
+              dark:bg-[#242424]
             "
           >
-            <h3 className="mb-3 text-xl font-semibold text-slate-900 dark:text-white">
+            <p
+              className="
+                mb-2
+                font-sans
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[0.2em]
+                text-brand-gold
+              "
+            >
+              Contact
+            </p>
+
+            <h3
+              className="
+                mb-3
+                font-display
+                text-xl
+                font-semibold
+                text-brand-brown
+                dark:text-white
+              "
+            >
               Let's connect
             </h3>
 
-            <p className="mb-8 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              I'm always open to discussing new projects, opportunities, and
-              ideas.
+            <p
+              className="
+                mb-8
+                font-sans
+                text-sm
+                leading-6
+                text-ink/70
+                dark:text-gray-400
+              "
+            >
+              I'm always open to discussing new projects, software
+              opportunities, and interesting ideas.
             </p>
 
             <div className="space-y-5">
+              {/* Email */}
               <a
                 href="mailto:eishat915@gmail.com"
                 className="
-                  flex items-center gap-4
-                  text-sm text-slate-600
+                  flex
+                  items-center
+                  gap-4
+                  font-sans
+                  text-sm
+                  text-ink/70
                   transition-colors
-                  hover:text-indigo-600
-                  dark:text-slate-400
-                  dark:hover:text-indigo-400
+                  duration-300
+                  hover:text-brand-gold
+                  dark:text-gray-400
+                  dark:hover:text-brand-gold
                 "
               >
                 <span
                   className="
-                    flex h-10 w-10 items-center justify-center
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
                     rounded-lg
-                    bg-slate-100
-                    text-indigo-600
-                    dark:bg-slate-800
-                    dark:text-indigo-400
+                    bg-brand-gold/10
+                    text-brand-gold
                   "
                 >
                   <FaEnvelope />
                 </span>
 
-                <span>eishat915@gmail.com</span>
+                <span className="break-all">eishat915@gmail.com</span>
               </a>
 
+              {/* GitHub */}
               <a
                 href="https://github.com/ishat005"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  flex items-center gap-4
-                  text-sm text-slate-600
+                  flex
+                  items-center
+                  gap-4
+                  font-sans
+                  text-sm
+                  text-ink/70
                   transition-colors
-                  hover:text-indigo-600
-                  dark:text-slate-400
-                  dark:hover:text-indigo-400
+                  duration-300
+                  hover:text-brand-gold
+                  dark:text-gray-400
+                  dark:hover:text-brand-gold
                 "
               >
                 <span
                   className="
-                    flex h-10 w-10 items-center justify-center
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
                     rounded-lg
-                    bg-slate-100
-                    text-indigo-600
-                    dark:bg-slate-800
-                    dark:text-indigo-400
+                    bg-brand-gold/10
+                    text-brand-gold
                   "
                 >
                   <FaGithub />
@@ -191,27 +258,36 @@ const Contact = () => {
                 <span>GitHub</span>
               </a>
 
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/thakurisha/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  flex items-center gap-4
-                  text-sm text-slate-600
+                  flex
+                  items-center
+                  gap-4
+                  font-sans
+                  text-sm
+                  text-ink/70
                   transition-colors
-                  hover:text-indigo-600
-                  dark:text-slate-400
-                  dark:hover:text-indigo-400
+                  duration-300
+                  hover:text-brand-gold
+                  dark:text-gray-400
+                  dark:hover:text-brand-gold
                 "
               >
                 <span
                   className="
-                    flex h-10 w-10 items-center justify-center
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
                     rounded-lg
-                    bg-slate-100
-                    text-indigo-600
-                    dark:bg-slate-800
-                    dark:text-indigo-400
+                    bg-brand-gold/10
+                    text-brand-gold
                   "
                 >
                   <FaLinkedin />
@@ -227,13 +303,14 @@ const Contact = () => {
             onSubmit={handleSubmit}
             className="
               rounded-2xl
-              border border-slate-200
+              border
+              border-brand-gold/30
               bg-white
               p-6
               shadow-sm
               sm:p-8
-              dark:border-slate-800
-              dark:bg-slate-900
+              dark:border-brand-gold/20
+              dark:bg-[#242424]
             "
           >
             {/* Name */}
@@ -241,10 +318,13 @@ const Contact = () => {
               <label
                 htmlFor="name"
                 className="
-                  mb-2 block
-                  text-sm font-medium
-                  text-slate-700
-                  dark:text-slate-300
+                  mb-2
+                  block
+                  font-sans
+                  text-sm
+                  font-medium
+                  text-ink
+                  dark:text-gray-300
                 "
               >
                 Name
@@ -260,21 +340,27 @@ const Contact = () => {
                 autoComplete="name"
                 required
                 className="
-                  w-full rounded-xl
-                  border border-slate-200
+                  w-full
+                  rounded-xl
+                  border
+                  border-brand-gold/20
                   bg-white
-                  px-4 py-3
-                  text-sm text-slate-900
+                  px-4
+                  py-3
+                  font-sans
+                  text-sm
+                  text-ink
                   outline-none
-                  transition
-                  placeholder:text-slate-400
-                  focus:border-indigo-500
+                  transition-all
+                  duration-300
+                  placeholder:text-gray-400
+                  focus:border-brand-gold
                   focus:ring-2
-                  focus:ring-indigo-500/20
-                  dark:border-slate-700
-                  dark:bg-slate-950
+                  focus:ring-brand-gold/20
+                  dark:border-gray-700
+                  dark:bg-[#1c1c1c]
                   dark:text-white
-                  dark:placeholder:text-slate-500
+                  dark:placeholder:text-gray-500
                 "
               />
             </div>
@@ -284,10 +370,13 @@ const Contact = () => {
               <label
                 htmlFor="email"
                 className="
-                  mb-2 block
-                  text-sm font-medium
-                  text-slate-700
-                  dark:text-slate-300
+                  mb-2
+                  block
+                  font-sans
+                  text-sm
+                  font-medium
+                  text-ink
+                  dark:text-gray-300
                 "
               >
                 Email
@@ -303,21 +392,27 @@ const Contact = () => {
                 autoComplete="email"
                 required
                 className="
-                  w-full rounded-xl
-                  border border-slate-200
+                  w-full
+                  rounded-xl
+                  border
+                  border-brand-gold/20
                   bg-white
-                  px-4 py-3
-                  text-sm text-slate-900
+                  px-4
+                  py-3
+                  font-sans
+                  text-sm
+                  text-ink
                   outline-none
-                  transition
-                  placeholder:text-slate-400
-                  focus:border-indigo-500
+                  transition-all
+                  duration-300
+                  placeholder:text-gray-400
+                  focus:border-brand-gold
                   focus:ring-2
-                  focus:ring-indigo-500/20
-                  dark:border-slate-700
-                  dark:bg-slate-950
+                  focus:ring-brand-gold/20
+                  dark:border-gray-700
+                  dark:bg-[#1c1c1c]
                   dark:text-white
-                  dark:placeholder:text-slate-500
+                  dark:placeholder:text-gray-500
                 "
               />
             </div>
@@ -327,10 +422,13 @@ const Contact = () => {
               <label
                 htmlFor="message"
                 className="
-                  mb-2 block
-                  text-sm font-medium
-                  text-slate-700
-                  dark:text-slate-300
+                  mb-2
+                  block
+                  font-sans
+                  text-sm
+                  font-medium
+                  text-ink
+                  dark:text-gray-300
                 "
               >
                 Message
@@ -341,32 +439,39 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your project or opportunity..."
                 rows="6"
                 required
                 className="
-                  w-full resize-none rounded-xl
-                  border border-slate-200
+                  w-full
+                  resize-none
+                  rounded-xl
+                  border
+                  border-brand-gold/20
                   bg-white
-                  px-4 py-3
-                  text-sm text-slate-900
+                  px-4
+                  py-3
+                  font-sans
+                  text-sm
+                  text-ink
                   outline-none
-                  transition
-                  placeholder:text-slate-400
-                  focus:border-indigo-500
+                  transition-all
+                  duration-300
+                  placeholder:text-gray-400
+                  focus:border-brand-gold
                   focus:ring-2
-                  focus:ring-indigo-500/20
-                  dark:border-slate-700
-                  dark:bg-slate-950
+                  focus:ring-brand-gold/20
+                  dark:border-gray-700
+                  dark:bg-[#1c1c1c]
                   dark:text-white
-                  dark:placeholder:text-slate-500
+                  dark:placeholder:text-gray-500
                 "
               />
             </div>
 
             {/* Status */}
             <div
-              className="mb-5 min-h-5 text-sm"
+              className="mb-5 min-h-5 font-sans text-sm"
               aria-live="polite"
             >
               {status === "success" && (
@@ -387,22 +492,28 @@ const Contact = () => {
               type="submit"
               disabled={status === "sending"}
               className="
-                w-full rounded-xl
-                bg-indigo-600
-                px-5 py-3
-                text-sm font-semibold
+                w-full
+                rounded-xl
+                bg-brand-gold
+                px-5
+                py-3
+                font-sans
+                text-sm
+                font-semibold
                 text-white
                 shadow-sm
                 transition-all
-                hover:bg-indigo-700
+                duration-300
+                hover:-translate-y-0.5
+                hover:bg-brand-brown
                 hover:shadow-md
                 focus:outline-none
                 focus:ring-2
-                focus:ring-indigo-500
+                focus:ring-brand-gold
                 focus:ring-offset-2
                 disabled:cursor-not-allowed
                 disabled:opacity-60
-                dark:focus:ring-offset-slate-900
+                dark:focus:ring-offset-[#242424]
               "
             >
               {status === "sending" ? "Sending..." : "Send Message"}
@@ -415,3 +526,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

@@ -25,14 +25,25 @@ const ThemeToggle = ({ theme, toggleTheme }) => (
         theme === "light" ? "fa-moon" : "fa-sun"
       }`}
       aria-hidden="true"
-    ></i>
+    />
   </button>
 );
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleHomeClick = () => {
+  // Scroll completely to the top when "Isha Thakur" is clicked
+  const handleHomeClick = (event) => {
+    event.preventDefault();
+    setMenuOpen(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleNavClick = () => {
     setMenuOpen(false);
   };
 
@@ -44,6 +55,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           href="#home"
           onClick={handleHomeClick}
           className="font-display text-xl font-semibold tracking-tight text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
+          aria-label="Go to top of page"
         >
           Isha Thakur
         </a>
@@ -54,6 +66,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={handleNavClick}
                 className="font-sans text-sm font-medium uppercase tracking-wide text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
               >
                 {link.label}
@@ -61,7 +74,6 @@ const Navbar = ({ theme, toggleTheme }) => {
             </li>
           ))}
 
-          {/* Theme Toggle */}
           <li>
             <ThemeToggle
               theme={theme}
@@ -89,7 +101,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 menuOpen ? "fa-xmark" : "fa-bars"
               }`}
               aria-hidden="true"
-            ></i>
+            />
           </button>
         </div>
       </div>
@@ -101,7 +113,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <li key={link.href}>
               <a
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={handleNavClick}
                 className="block font-sans text-sm font-medium uppercase tracking-wide text-brand-brown transition-colors duration-300 hover:text-brand-gold dark:text-white"
               >
                 {link.label}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import cosmochat from "../../assets/cosmochat.avif";
+import cosmochat from "../../assets/cosmochat.jpeg";
 import chatApp from "../../assets/realtime-chat.png";
 import materialUI from "../../assets/material-ui.png";
 import laMaison from "../../assets/la-maison.png";

@@ -24,11 +24,12 @@ const projects = [
 
   {
     image: cosmochat,
-    title: "CosmoChat",
+    title: "CosmoChat — AI Chat Application",
     description:
-      "An AI-powered chat interface built with React and OpenAI integration.",
-    technologies: ["React", "JavaScript", "OpenAI"],
-    link: "https://youtu.be/WFLQLM3exgg",
+      `A full-stack AI chat application built with React, Node.js, Express, and Google Gemini API. Features a responsive 
+      chat interface, real-time message handling, loading states, error handling, and secure server-side API communication.`,
+    technologies: ["React", "JavaScript", "Node.js", "Express", "Gemini API"],
+    link: "https://cosmochatui.netlify.app/",
   },
 
   {

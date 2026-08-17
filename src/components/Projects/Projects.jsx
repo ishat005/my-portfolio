@@ -238,7 +238,7 @@ const ProjectCard = ({
               dark:hover:text-indigo-300
             "
           >
-            View Project
+            Live Demo
 
             <span
               className="

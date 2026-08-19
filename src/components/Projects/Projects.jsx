@@ -36,9 +36,10 @@ const projects = [
     image: chatApp,
     title: "Realtime Chat App",
     description:
-      "A real-time messaging application that enables users to send and receive messages instantly.",
-    technologies: ["Node.js", "Socket.io", "JavaScript"],
-    link: "https://youtu.be/v2naY4vc80E",
+      `A real-time messaging application built with Socket.io, featuring instant message delivery, live user presence 
+      (join/leave notifications), and a responsive UI styled with Sass.`,
+    technologies: ["Node.js", "Express", "Socket.io", "Sass", "JavaScript"],
+    link: "https://isha-chat-app.netlify.app",
   },
 
   {

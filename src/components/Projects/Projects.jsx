@@ -49,7 +49,7 @@ const projects = [
       `A responsive admin dashboard built with React and Material UI, featuring reusable components, data visualizations, 
       mock business data, and light/dark theme support.`,
     technologies: ["React", "Material UI", "JavaScript", "Nivo Charts"],
-    link: "admin-dashboard-ui-reactapp.netlify.app",
+    link: "https://admin-dashboard-ui-reactapp.netlify.app",
   },
 ];
 

@@ -4,6 +4,7 @@ import cosmochat from "../../assets/cosmochat.jpeg";
 import chatApp from "../../assets/realtime-chat.png";
 import materialUI from "../../assets/material-ui.png";
 import laMaison from "../../assets/la-maison.png";
+import shopease from "../../assets/shopease.png"
 
 const projects = [
   {
@@ -20,6 +21,25 @@ const projects = [
     ],
     link: "https://lamaisonreal-estate.netlify.app/",
     featured: true,
+  },
+
+  {
+    image: shopease,
+    title: "ShopEase — Full-Stack E-Commerce Platform",
+    description:
+      `A full-stack e-commerce platform built with React, Redux Toolkit, Node.js, Express, and MongoDB. 
+      Features product catalog management, shopping cart and checkout workflows, asynchronous state management, 
+      real-time inventory validation, and atomic stock updates designed to prevent overselling.`,
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Material UI",
+      "Tailwind CSS",
+    ],
+    link: "https://ecommerce-shopease-platform.netlify.app/",
   },
 
   {
@@ -134,12 +154,13 @@ const ProjectCard = ({
               className={`
                 h-full
                 w-full
+                object-contain
                 transition-transform
                 duration-500
                 ${
                   featured
-                    ? "object-contain group-hover:scale-[1.01]"
-                    : "object-cover group-hover:scale-105"
+                    ? "group-hover:scale-[1.01]"
+                    : "group-hover:scale-105"
                 }
               `}
             />

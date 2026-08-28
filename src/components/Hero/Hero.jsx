@@ -11,7 +11,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="order-2 text-center md:order-1 md:text-left">
           <p className="mb-3 font-sans text-sm font-semibold uppercase tracking-[0.25em] text-brand-gold">
-            Software Engineer
+            Software Engineer | Full-Stack Developer
           </p>
 
           <h1 className="font-display text-4xl font-bold leading-tight text-brand-brown dark:text-white sm:text-5xl lg:text-6xl">
@@ -36,8 +36,8 @@ const Hero = () => {
               "React",
               "Node.js",
               "Python",
+              "MongoDB",
               "SQL",
-              "Azure",
             ].map((technology) => (
               <span
                 key={technology}

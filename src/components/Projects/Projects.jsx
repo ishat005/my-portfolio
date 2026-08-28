@@ -40,6 +40,7 @@ const projects = [
       "Tailwind CSS",
     ],
     link: "https://ecommerce-shopease-platform.netlify.app/",
+    featured: true,
   },
 
   {

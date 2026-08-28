@@ -32,7 +32,9 @@ const About = () => {
             I'm a Software Engineer focused on building reliable, scalable,
             and user-focused software. I enjoy working across the stack, from
             developing backend services and APIs to creating responsive and
-            interactive frontend experiences.
+            interactive frontend experiences. Alongside my professional engineering work, 
+            I build full-stack applications and product prototypes that combine modern 
+            frontend interfaces, backend services, databases, APIs, and AI integrations.
           </p>
 
           <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-gray-200">

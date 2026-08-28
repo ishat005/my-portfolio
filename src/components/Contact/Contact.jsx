@@ -103,18 +103,14 @@ const Contact = () => {
 
           <p
             className="
-              mx-auto
-              max-w-xl
-              font-sans
-              text-sm
-              leading-7
-              text-ink/70
+              mx-auto max-w-xl font-sans text-sm leading-7
+              text-ink/70 dark:text-gray-300
               sm:text-base
-              dark:text-gray-300
             "
           >
-            Have a project, opportunity, or just want to connect? Send me a
-            message and I'll get back to you.
+            Have a project in mind? <br />
+            I'm available for freelance web development and custom software projects.
+            Let's discuss what you're looking to build.
           </p>
         </div>
 

@@ -46,7 +46,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:eishat915@gmail.com"
+            href="mailto:tisha8357@gmail.com"
             aria-label="Email"
             className="
               text-slate-500

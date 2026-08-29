@@ -20,40 +20,43 @@ const About = () => {
 
         {/* About Content */}
         <div className="text-center md:text-left">
-          <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-widest text-brand-gold">
-            Software Engineer
-          </p>
-
-          <h2 className="mb-6 font-display text-3xl font-bold text-brand-brown dark:text-white md:text-4xl">
+          <h2 className="mb-3 font-display text-3xl font-bold text-brand-brown dark:text-white md:text-4xl">
             About Me
           </h2>
 
+          <p className="mb-6 font-sans text-sm font-semibold uppercase tracking-widest text-brand-gold">
+            Software Engineer & Full-Stack Developer
+          </p>
+
           <p className="font-sans text-lg leading-relaxed text-ink dark:text-gray-200">
-            I'm a Software Engineer focused on building reliable, scalable,
-            and user-focused software. I enjoy working across the stack, from
-            developing backend services and APIs to creating responsive and
-            interactive frontend experiences. Alongside my professional engineering work, 
-            I build full-stack applications and product prototypes that combine modern 
-            frontend interfaces, backend services, databases, APIs, and AI integrations.
+            I'm a Software Engineer focused on building reliable, scalable, and
+            user-focused software. I enjoy working across the stack, from developing
+            backend services and APIs to creating responsive and interactive frontend
+            experiences.
           </p>
 
           <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-gray-200">
-            My professional experience includes Java, Spring Boot, React,
-            Node.js, Python, SQL, Azure, and Snowflake. I've worked on backend
-            services, API integrations, cloud workflows, automation, reporting
-            systems, data validation, and AI-powered applications.
+            Alongside my professional engineering work, I build full-stack applications
+            and product prototypes that combine modern frontend interfaces, backend
+            services, databases, APIs, and AI integrations.
+          </p>
+
+          <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-gray-200">
+            My professional experience includes Java, Spring Boot, React, Node.js,
+            Python, SQL, Azure, and Snowflake. I've worked on backend services, API
+            integrations, cloud workflows, automation, reporting systems, data
+            validation, and AI-powered applications.
           </p>
 
           <p className="mt-4 font-sans text-lg leading-relaxed text-ink dark:text-gray-200">
             I enjoy solving technical problems and turning ideas into practical
-            software. I'm particularly interested in full-stack development,
-            backend engineering, cloud applications, automation, and
-            AI-powered solutions.
+            software. I'm particularly interested in full-stack development, backend
+            engineering, cloud applications, automation, and AI-powered solutions.
           </p>
 
-          <p className="mt-4 font-sans text-base leading-relaxed text-ink/80 dark:text-gray-400">
-            Outside of development, I enjoy travelling, photography, music,
-            exploring new places, and learning about emerging technologies.
+          <p className="mt-5 font-sans text-base leading-relaxed text-ink/80 dark:text-gray-400">
+            Outside of development, I enjoy travelling, photography, music, exploring
+            new places, and learning about emerging technologies.
           </p>
         </div>
       </div>
